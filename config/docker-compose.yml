@@ -1,1 +1,39 @@
+version: "3"
 
+services:
+ # Unbound's docker config - Acts as a Recurssive DNS Resolver
+  unbound:
+    container_name: unbound
+    image: mvance/unbound:latest
+    network_mode: host
+    volumes:
+      - ./unbound:/opt/unbound/etc/unbound
+    restart: unless-stopped
+
+  # Pihole config - Acts as a ad-filtering entry gateway
+  pihole:
+    container_name: pihole
+    image: pihole/pihole:latest
+    network_mode: host
+    depends_on:
+      - unbound
+    environment:
+      - TZ=Asia/Kolkata
+      - FTLCONF_webserver_api_password=
+      - FTLCONF_dns_listeningMode=all
+      - FTLCONF_dns_upstreams=127.0.0.1#5335  # Route queries back to Unbound over host loopback
+    volumes:
+      - ./etc-pihole:/etc/pihole
+      - ./etc-dnsmasq.d:/etc/dnsmasq.d
+    restart: unless-stopped
+
+  # Portainer - Web UI for docker
+  portainer:
+    container_name: portainer
+    image: portainer/portainer-ce:latest
+    ports:
+      - "9443:9443"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./portainer_data:/data
+    restart: always
