@@ -63,7 +63,9 @@ gives insights on application health and status
 Portainer also allows to natively deploy and manage apps.
 
 ## Network Structure
-<img width="50%" height="50%" align="center" alt="Blank diagram" src="https://github.com/user-attachments/assets/9835a905-bc1b-41b7-8cf8-dc5031163293" />
+<div align="center">
+  <img width="50%" height="50%" alt="Blank diagram" src="https://github.com/user-attachments/assets/9835a905-bc1b-41b7-8cf8-dc5031163293" />
+</div>
 
 
 
