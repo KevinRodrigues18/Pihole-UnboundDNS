@@ -43,7 +43,28 @@ Key Config choices
 > [!WARNING]
 > Make sure your router is under a firewall since you are permitting DNS queries from all origins, its better to double check.
 
-- click [__here__](config/docker-compose.yml) for the full docker config file
+
+2. Unbound - The Recursive Resolver
+Instead of forwarding Pi-Hole's DNS queries to a third party upstream servers which makes are traffic visible to them, Unbound resolves domains by walking the DNS heirarchy from:
+`root servers` —> `root` -> `TLD` -> `authoritative nameserver`
+
+We are trying to mimick what a public solver would do but locally.
+
+- `Listens only on 127.0.0.1:5335` — it's an internal resolver for Pi-hole only, never exposed to the network directly.
+- `private-address` ranges are declared so Unbound won't accept "answers" claiming to resolve public names to private/internal IP ranges (a basic DNS rebinding protection).
+- `hide-identity / hide-version` — giving away the resolver version can be a form of intelligence to potential attackers.
+- `harden-dnssec-stripped: yes` — Incase our DNSSEC gets stripped the resolver will block all queries instead of handling them insecuerly.
+
+click [__here__](config/docker-compose.yml) for the full docker config file.
+
+3. Portainer — Visibility, Management and Deployment
+Instead of relying on Docker ps logs its best practice to use a web UI dashboard like portainer that  
+gives insights on application health and status
+Portainer also allows to natively deploy and manage apps.
+
+## Network Structure
+<img width="1661" height="2430" alt="Blank diagram" src="https://github.com/user-attachments/assets/9835a905-bc1b-41b7-8cf8-dc5031163293" />
+
 
 
 
