@@ -26,6 +26,8 @@
 
 <img width="50%" height="50%" alt="image" src="https://github.com/user-attachments/assets/a662caa2-c474-496d-93ae-6ba24ed8eb9f" />
 
+Portainer Containers Dashboard
+<img width="50%" height="50%" alt="image" src="https://github.com/user-attachments/assets/b4c7fa76-1b2b-4486-ab91-6dbc36a0f9bc" />
 
 
 
