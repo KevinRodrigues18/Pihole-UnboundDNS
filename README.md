@@ -24,8 +24,23 @@ sudo systemctl restart systemd-logind.service
 
 Admin client: A mini PC used exclusively to SSH into the server for deployment and maintenance 
 
+## ⚙️ How It Works
+1. Pi-Hole - The Gateway
+Every device on the network is configured (via router DHCP settings or manually) to use the Pi-hole's IP as its DNS server.
+Pi-hole checks each query against its blocklists
+The blocked lists I used on my pi-hole are:
 
+`https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts`
 
+`https://v.firebog.net/hosts/Easyprivacy.txt`
+
+`https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareHosts.txt`
+
+Key Config choices
+- network_mode: host — Pi-hole needs to bind directly to port 53 on the host to serve DNS to the whole LAN.
+- FTLCONF_dns_upstreams=127.0.0.1#5335 — instead of pointing at Cloudflare/Google, Pi-hole's only upstream is the local Unbound instance.
+- FTLCONF_dns_listeningMode=all — allows Pi-hole to accept queries from any interface, not just localhost, since other devices on the LAN need to reach it.
+click [__here__](config/docker-compose.yml) for the full docker config file
 
 
 
