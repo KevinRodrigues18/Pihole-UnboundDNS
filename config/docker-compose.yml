@@ -19,7 +19,7 @@ services:
       - unbound
     environment:
       - TZ=Asia/Kolkata
-      - FTLCONF_webserver_api_password=
+      - FTLCONF_webserver_api_password=${FTLCONF_webserver_api_password}
       - FTLCONF_dns_listeningMode=all
       - FTLCONF_dns_upstreams=127.0.0.1#5335  # Route queries back to Unbound over host loopback
     volumes:
