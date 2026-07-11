@@ -4,10 +4,9 @@
 `Ad blocking`: Verified against known ad/tracker test domains and confirmed via the Pi-hole query log that they were blocked before ever reaching Unbound.
 `DNSSEC validation:` Confirmed Unbound correctly rejects deliberately misconfigured/invalid DNSSEC test domains.
 `Failover behavior:` Container restarts (docker compose restart unbound) to confirm Pi-hole handles a temporarily unavailable upstream.
-<div align="center">
 <img width="50%" height="50%" alt="image" src="https://github.com/user-attachments/assets/c4efc2a0-0503-4def-8399-3b236a91d9df" />
-</div>
----
+
+---  
 `Ad blocking`: Verified against known ad/tracker test domains and confirmed via the Pi-hole query log that they were blocked before ever reaching Unbound.
 
 ```
@@ -22,6 +21,9 @@
 2026-07-11 20:30:26.400 query[AAAA] www.gstatic.com from 192.168.0.101
 2026-07-11 20:30:26.400 cached www.gstatic.com is 2404:6800:4000:101f::5e
 ```
+
+`DNSSEC validation:` Confirmed Unbound correctly rejects deliberately misconfigured/invalid DNSSEC test domains.
+<img width="50%" height="50%" alt="image" src="https://github.com/user-attachments/assets/a662caa2-c474-496d-93ae-6ba24ed8eb9f" />
 
 
 
