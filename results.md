@@ -22,7 +22,8 @@
 2026-07-11 20:30:26.400 cached www.gstatic.com is 2404:6800:4000:101f::5e
 ```
 
-`DNSSEC validation:` Confirmed Unbound correctly rejects deliberately misconfigured/invalid DNSSEC test domains.
+`DNSSEC validation:` Confirmed Unbound correctly rejects deliberately misconfigured/invalid DNSSEC test domains.  
+
 <img width="50%" height="50%" alt="image" src="https://github.com/user-attachments/assets/a662caa2-c474-496d-93ae-6ba24ed8eb9f" />
 
 
