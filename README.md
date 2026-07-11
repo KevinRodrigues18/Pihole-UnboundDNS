@@ -69,7 +69,16 @@ Portainer also allows to natively deploy and manage apps.
 
 ### ✪ For Verification and Testing of the setup with screenshots click [here](results.md)
 
+## 📈 Results
+Network-wide ad/tracker blocking active for all devices on the LAN with zero client-side configuration (browser extensions, etc.) required.
+DNS queries resolved without depending on any third-party DNS provider — full recursive resolution handled locally.
 
+> [!NOTE]
+> I plan to improve this setup by adding another pi-hole server along side for redundancy and also improvide a VPN to allow secure DNS and ad-blocking while away from home.
+> Switch to a defined macvaln/bridge network for better isolation
+
+## 📄 License
+The project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 
 
