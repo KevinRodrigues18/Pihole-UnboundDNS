@@ -67,7 +67,7 @@ Portainer also allows to natively deploy and manage apps.
   <img width="50%" height="50%" alt="Blank diagram" src="https://github.com/user-attachments/assets/9835a905-bc1b-41b7-8cf8-dc5031163293" />
 </div>
 
-### ✪ For Verification and Testing of the setup with screenshots click here
+### ✪ For Verification and Testing of the setup with screenshots click [here](results.md)
 
 
 
