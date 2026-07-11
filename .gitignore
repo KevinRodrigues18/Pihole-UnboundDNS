@@ -1,0 +1,8 @@
+.env
+*.env
+secrets/
+pihole-data/
+dnsmasq.d/
+unbound-data/
+.DS_Store
+Thumbs.db
