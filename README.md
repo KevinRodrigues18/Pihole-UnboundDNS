@@ -14,7 +14,7 @@ This project aims to tackle that problem with a fully self-hosted DNS stack
 - `Unbound`: Acts as Pi-hole's upstream resolver, instead of forwarding to a 3rd party DNS provider. It resolves queries from the root DNS servers.
 - `Portainer`: An app that show the web UI of the dokcer app that helps to manage and view the status of the apps in the docker containers.
 
-
+<br><br>
 ## 🛠️ Hardware Used
 Server: An old laptop repurposed as a home server running debian and docker.  
 (Did some config changes on to stay awake even when the lid was closed)
@@ -26,6 +26,7 @@ sudo systemctl restart systemd-logind.service
 
 Admin client: A mini PC used exclusively to SSH into the server for deployment and maintenance 
 
+<br><br>
 ## ⚙️ How It Works
 1. Pi-Hole - The Gateway
 Every device on the network is configured (via router DHCP settings or manually) to use the Pi-hole's IP as its DNS server.
@@ -64,7 +65,7 @@ Portainer also allows to natively deploy and manage apps.
 
 click [__here__](config/docker-compose.yml) for the full docker config file.
 
-
+<br><br>
 ## Network Structure
 <div align="center">
   <img width="50%" height="50%" alt="Blank diagram" src="https://github.com/user-attachments/assets/9835a905-bc1b-41b7-8cf8-dc5031163293" />
@@ -72,6 +73,7 @@ click [__here__](config/docker-compose.yml) for the full docker config file.
 
 ### ✪ For Verification and Testing of the setup with screenshots click [here](results.md)
 
+<br><br>
 ## 📈 Results
 Network-wide ad/tracker blocking active for all devices on the LAN with zero client-side configuration (browser extensions, etc.) required.
 DNS queries resolved without depending on any third-party DNS provider — full recursive resolution handled locally.
@@ -80,6 +82,7 @@ DNS queries resolved without depending on any third-party DNS provider — full 
 > I plan to improve this setup by adding another pi-hole server along side for redundancy and also improvide a VPN to allow secure DNS and ad-blocking while away from home.
 > Switch to a defined macvaln/bridge network for better isolation
 
+<br><br>
 ## 📄 License
 The project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
