@@ -4,7 +4,6 @@
 - Apps in this project are deployed in [docker](https://github.com/docker) containers and manager via [Portainer](https://github.com/portainer/portainer).
 - Built on a repurposed laptop acting as a home server.
 - The server is being managed and administered with a mini pc via SSH.
-
 <br><br>
 ## 📌 Project Overview
 Instead of relying on a my ISPs DNS Servers or public resolvers like Cloudfare and Google DNS to resolve domain names, which means every sites visited is being visible to a third party and no protecting against Ads and trackers on a network level.
