@@ -55,12 +55,13 @@ We are trying to mimick what a public solver would do but locally.
 - `hide-identity / hide-version` — giving away the resolver version can be a form of intelligence to potential attackers.
 - `harden-dnssec-stripped: yes` — Incase our DNSSEC gets stripped the resolver will block all queries instead of handling them insecuerly.
 
-click [__here__](config/docker-compose.yml) for the full docker config file.
-
 3. Portainer — Visibility, Management and Deployment
 Instead of relying on Docker ps logs its best practice to use a web UI dashboard like portainer that  
 gives insights on application health and status
 Portainer also allows to natively deploy and manage apps.
+
+click [__here__](config/docker-compose.yml) for the full docker config file.
+
 
 ## Network Structure
 <div align="center">
