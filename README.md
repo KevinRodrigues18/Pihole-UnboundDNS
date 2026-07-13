@@ -35,9 +35,7 @@ The blocked lists I used on my pi-hole are:
 `https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts`
 
 `https://v.firebog.net/hosts/Easyprivacy.txt`
-
-`https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareHosts.txt`
-
+<br><br>
 Key Config choices
 - `network_mode: host` — Pi-hole needs to take over port 53 in the server host to server DNS to the whole LAN.
 - `FTLCONF_dns_upstreams=127.0.0.1#5335` — instead of pointing at Cloudflare/Google, Pi-hole's only upstream is the local Unbound instance.
@@ -45,7 +43,7 @@ Key Config choices
 > [!WARNING]
 > Make sure your router is under a firewall since you are permitting DNS queries from all origins, its better to double check.
 
-
+<br><br>
 2. Unbound - The Recursive Resolver
 Instead of forwarding Pi-Hole's DNS queries to a third party upstream servers which makes are traffic visible to them, Unbound resolves domains by walking the DNS heirarchy from:
 `root servers` —> `root` -> `TLD` -> `authoritative nameserver`
