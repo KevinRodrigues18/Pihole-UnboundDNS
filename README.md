@@ -15,7 +15,7 @@ This project aims to tackle that problem with a fully self-hosted DNS stack
 
 <br><br>
 ## 🛠️ Hardware Used
-Server: An old laptop repurposed as a home server running debian and docker.  
+`Server`: An old laptop repurposed as a home server running debian and docker.  
 (Did some config changes on to stay awake even when the lid was closed)
 ```
 sudo nano /etc/systemd/logind.conf
@@ -23,7 +23,7 @@ HandleLidSwitch=ignore
 sudo systemctl restart systemd-logind.service
 ```
 
-Admin client: A mini PC used exclusively to SSH into the server for deployment and maintenance 
+`Admin client`: A mini PC used exclusively to SSH into the server for deployment and maintenance 
 
 <br><br>
 ## ⚙️ How It Works
